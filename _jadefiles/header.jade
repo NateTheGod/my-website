@@ -1,0 +1,28 @@
+mixin nav-content()
+  ul
+    li: a(href="#about") About
+    li: a(href="#youtube") YouTube
+    li: a(href="#design") Design
+    li: a(href="#photography") Photography
+    li: a(href="#motiondesign") Motion Design
+    li: a(href="#code") Code
+    li: a(href="#store") Store
+    li: a(href="#contact") Contact
+    
+    
+.mobile-nav
+  +nav-content()
+
+  
+
+header
+  .header-position
+    h1.logo Edwin Nettles
+    
+    nav.site-nav
+      +nav-content()
+      
+    
+    a(href="mailto:natedzn@gmail.com").email-link +email me
+
+    .mobile-nav-toggle: span
