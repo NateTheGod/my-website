@@ -1,0 +1,90 @@
+{
+  "name": "edwinnettles/my-website",
+  "version": "0.1.4",
+  "libraries": {
+    "xv": "^1.1.25"
+  },
+  "title": "",
+  "branch": "",
+  "style": {
+    "name": "Material",
+    "componentSet": {
+      "nav": "nav/DarkAbsoluteNav",
+      "header": "header/GradientHeader",
+      "article": "article/BasicArticle",
+      "footer": "footer/BasicFooter"
+    },
+    "fontFamily": "Roboto, sans-serif",
+    "heading": {
+      "fontWeight": 500,
+      "letterSpacing": "-0.01em"
+    },
+    "colors": {
+      "text": "#212121",
+      "background": "#fff",
+      "primary": "#2196f3",
+      "secondary": "#1565c0",
+      "highlight": "#ff4081",
+      "border": "#e0e0e0",
+      "muted": "#f5f5f5"
+    },
+    "layout": {
+      "centered": true,
+      "bannerHeight": "80vh",
+      "maxWidth": 896
+    }
+  },
+  "content": [
+    {
+      "component": "nav",
+      "links": [
+        {
+          "href": "https://github.com/edwinnettles/my-website",
+          "text": "GitHub"
+        },
+        {
+          "href": "https://npmjs.com/package/browser-sync-jekyll",
+          "text": "npm"
+        }
+      ]
+    },
+    {
+      "component": "header",
+      "heading": "my-website",
+      "subhead": "my personal website",
+      "children": [
+        {
+          "component": "ui/TweetButton",
+          "text": "my-website: my personal website",
+          "url": null
+        },
+        {
+          "component": "ui/GithubButton",
+          "user": "edwinnettles",
+          "repo": "my-website"
+        }
+      ],
+      "text": "v0.0.0"
+    },
+    {
+      "component": "article",
+      "metadata": {
+        "source": "github.readme"
+      },
+      "html": "<h1>jekyll-gulp-sass-browser-sync</h1>\n<p>A starter project including full setup for Jekyll, GulpJS, SASS, AutoPrefixer &amp; BrowserSync</p>\n<p>Here&apos;s a 1.5min <a href=\"http://quick.as/pvrslgx\">screencast</a> showing what you get.</p>\n<p>And here&apos;s a GIF showing the CSS injecting.</p>\n<p><img src=\"http://f.cl.ly/items/373y2E0e0i2p0E2O131g/test-gif.gif\"></p>\n<h2>System Preparation</h2>\n<p>To use this starter project, you&apos;ll need the following things installed on your machine.</p>\n<ol>\n<li><a href=\"http://jekyllrb.com/\">Jekyll</a> - <code>$ gem install jekyll</code></li>\n<li><a href=\"http://nodejs.org\">NodeJS</a> - use the installer.</li>\n<li><a href=\"https://github.com/gulpjs/gulp\">GulpJS</a> - <code>$ npm install -g gulp</code> (mac users may need sudo)</li>\n</ol>\n<h2>Local Installation</h2>\n<ol>\n<li>Clone this repo, or download it into a directory of your choice.</li>\n<li>Inside the directory, run <code>npm install</code>.</li>\n</ol>\n<h2>Usage</h2>\n<p><strong>development mode</strong></p>\n<p>This will give you file watching, browser synchronisation, auto-rebuild, CSS injecting etc etc.</p>\n<pre>$ gulp</pre><p><strong>jekyll</strong></p>\n<p>As this is just a Jekyll project, you can use any of the commands listed in their <a href=\"http://jekyllrb.com/docs/usage/\">docs</a></p>\n<h2>Deploy with Gulp</h2>\n<p>You can easily deploy your site build to a gh-pages branch. First, follow the instructions at <a href=\"https://github.com/rowoot/gulp-gh-pages\">gulp-gh-pages</a> to get your branch prepared for the deployment and to install the module. Then, in <code>gulpfile.js</code> you&apos;ll want to include something like the code below. <code>gulp.src()</code> needs to be the path to your final site folder, which by default will be <code>_site</code>. If you change the <code>destination</code> in your <code>_config.yml</code> file, be sure to reflect that in your gulpfile.</p>\n<pre><span class=\"hljs-keyword\">var</span> deploy = <span class=\"hljs-built_in\">require</span>(<span class=\"hljs-string\">&quot;gulp-gh-pages&quot;</span>);\n\ngulp.task(<span class=\"hljs-string\">&quot;deploy&quot;</span>, [<span class=\"hljs-string\">&quot;jekyll-build&quot;</span>], <span class=\"hljs-function\"><span class=\"hljs-keyword\">function</span> (<span class=\"hljs-params\"></span>) </span>{\n    <span class=\"hljs-keyword\">return</span> gulp.src(<span class=\"hljs-string\">&quot;./_site/**/*&quot;</span>)\n        .pipe(deploy());\n});</pre>"
+    },
+    {
+      "component": "footer",
+      "links": [
+        {
+          "href": "https://github.com/edwinnettles/my-website",
+          "text": "GitHub"
+        },
+        {
+          "href": "https://github.com/edwinnettles",
+          "text": "edwinnettles"
+        }
+      ]
+    }
+  ]
+}
